@@ -1,0 +1,26 @@
+﻿@using ASP.NET_CORE_App.Models
+@model Articulos
+@{
+    ViewData["Title"] = "DeleteArticulo";
+}
+
+<h2>DeleteArticulo</h2>
+
+
+<form asp-action="DeleteArticulo" asp-controller="Articulo" method="post">
+
+
+    <label asp-for="Nombre"></label>
+    <input asp-for="Nombre"  readonly/>
+    <br />
+
+    <label asp-for="Categoria"></label>
+    <input asp-for="Categoria" readonly/>
+    <br />
+
+    <label asp-for="Stock"></label>
+    <input asp-for="Stock" readonly />
+    <br />
+
+    <button type="submit">Borrar</button>
+</form>

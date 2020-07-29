@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ASP.NET_CORE_App.Models.Articulos>
+@{
+    ViewData["Title"] = "AllArticulo";
+}
+
+<h2>AllArticulo</h2>
+
+
+
+<table class="table table-striped" >
+    <tr>
+        <th>Nombre</th>
+
+        <th>Categoria</th>
+
+        <th>Stock</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (Articulos a in Model)
+    {
+        <tr>
+            <td>@a.Nombre</td>
+
+            <td>@a.Categoria</td>
+
+            <td>@a.Stock</td>
+
+            <td><a asp-action="EditArticulo" asp-route-id="@a.Id">Editar</a></td>
+
+
+            <td><a asp-action="DeleteArticulo" asp-route-id="@a.Id"> Borrar </a></td>
+
+        </tr>
+
+    }
+
+</table>
+
+<p><a asp-action="AddArticulo" asp-controller="Articulo" class="btn btn-info">Agregar nuevo articulo</a></p>
+
+

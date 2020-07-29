@@ -1,0 +1,25 @@
+﻿@using ASP.NET_CORE_App.Models
+@model Articulos
+@{
+    ViewData["Title"] = "AddArticulo";
+}
+
+<h2>AddArticulo</h2>
+
+<form asp-action="AddArticulo" asp-controller="Articulo" method="post">
+
+
+    <label asp-for="Nombre"></label>
+    <input asp-for="Nombre" />
+    <br />
+
+    <label asp-for="Categoria"></label>
+    <input asp-for="Categoria" />
+    <br />
+
+    <label asp-for="Stock"></label>
+    <input asp-for="Stock" />
+    <br />
+
+    <button type="submit">Agregar</button>
+</form>
